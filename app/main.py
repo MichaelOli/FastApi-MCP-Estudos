@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.routers import items
+from app.routers import async_demo, items
 
 app = FastAPI(
     title="FastAPI+MCP Coding Test",
@@ -15,3 +15,5 @@ async def health_check():
 
 
 app.include_router(items.router)
+
+app.include_router(async_demo.router)
